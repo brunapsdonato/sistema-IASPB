@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'sistema-IASPB'`, () => {
+  it(`should have as title 'primeiro-angular-20232'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('sistema-IASPB');
+    expect(app.title).toEqual('primeiro-angular-20232');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('sistema-IASPB app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('primeiro-angular-20232 app is running!');
   });
 });

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Aluno} from "./shared/model/aluno";
+import {ALUNOS} from "./shared/model/ALUNOS";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'sistema-IASPB';
+  title = 'primeiro-angular-20232';
+
+  constructor() {
+  }
+
 }
