@@ -1,39 +1,50 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {FormsModule} from "@angular/forms";
-import { MatriculaPipe } from './shared/pipes/matricula.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCardModule} from "@angular/material/card";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatInputModule} from "@angular/material/input";
-import {MatIconModule} from "@angular/material/icon";
-import {MatButtonModule} from "@angular/material/button";
-import {MatBadgeModule} from "@angular/material/badge";
-import {AlunoModule} from "./aluno/aluno.module";
-import { MenuComponent } from './layout/layout/menu/menu.component';
-import {LayoutModule} from "./layout/layout/layout.module";
-import {FlexLayoutModule, FlexModule} from "@angular/flex-layout";
-import {HttpClientModule} from "@angular/common/http";
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserService } from './services/user.service';
+import { UserAddEditComponent } from './user-add-edit/user-add-edit.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserListComponent,
+    UserAddEditComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     BrowserAnimationsModule,
-    AlunoModule,
-    LayoutModule,
-    FlexModule,
-    FlexLayoutModule,
-    HttpClientModule
+    MatButtonModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatTableModule,
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

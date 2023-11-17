@@ -1,2 +1,12 @@
-<app-menu></app-menu>
-<router-outlet></router-outlet>
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>IASPB</span>
+      <span class="example-spacer"></span>
+      <button mat-raised-button (click)="openAddEditUserForm()">Novo Usuário</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <app-user-list></app-user-list>
+
+

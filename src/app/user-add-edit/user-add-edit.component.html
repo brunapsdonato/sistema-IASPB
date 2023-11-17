@@ -1,0 +1,59 @@
+<div mat-dialog-title><h1>Formulário de usuários</h1></div>
+<div mat-dialog-content class="content">
+  <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput type="text" placeholder="Digite o nome" formControlName="nome">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Sobrenome</mat-label>
+        <input matInput type="text" placeholder="Digite o sobrenome" formControlName="sobrenome">
+      </mat-form-field>
+    </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="text" placeholder="Exemplo@email.com" formControlName="email">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Data de nascimento</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="dataNascimento">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-radio-group aria-label="Select an option" formControlName="sexo">
+          <mat-label>Sexo</mat-label>
+          <mat-radio-button value="Masculino">Masculino</mat-radio-button>
+          <mat-radio-button value="Feminino">Feminino</mat-radio-button>
+          <mat-radio-button value="Outros">Outros</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Serviço Utilizado</mat-label>
+          <mat-select formControlName="servico">
+            <mat-option *ngFor="let val of servicoUtilizado " [value]="val">{{val}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Profissão</mat-label>
+          <input matInput type="text" placeholder="Ex. Professor" formControlName="profissao">
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Endereço</mat-label>
+          <input matInput type="text" placeholder="Rua Fulano de Tal, 00, bairro, cidade - sigla do estado" formControlName="endereco">
+        </mat-form-field>
+      </div>
+
+    <div mat-dialog-actions class="action">
+      <button mat-raised-button>Cancelar</button>
+      <button mat-raised-button color="primary" type="submit">Salvar</button>
+    </div>
+  </form>
+</div>

@@ -1,23 +1,65 @@
 {
-  "disciplinas": [],
-  "alunos": [
+  "posts": [
     {
       "id": 1,
-      "matricula": "123",
-      "nome": "Gustacvo",
-      "idade": "20"
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "nome": "b",
+      "sobrenome": "d",
+      "email": "bru@ni.com",
+      "dataNascimento": "",
+      "sexo": "",
+      "servico": "",
+      "profissao": "",
+      "endereco": "",
+      "id": 5
     },
     {
-      "id": 2,
-      "matricula": "124",
-      "nome": "Wagner",
-      "idade": "30"
+      "nome": "nion",
+      "sobrenome": "",
+      "email": "",
+      "dataNascimento": "",
+      "sexo": "",
+      "servico": "",
+      "profissao": "",
+      "endereco": "",
+      "id": 6
     },
     {
-      "id": 3,
-      "matricula": "125",
-      "nome": "teste",
-      "idade": "30"
+      "nome": "m kç",
+      "sobrenome": "kl",
+      "email": "bl",
+      "dataNascimento": "1998-05-02T03:00:00.000Z",
+      "sexo": "",
+      "servico": "",
+      "profissao": "j",
+      "endereco": "jlkl",
+      "id": 7
+    },
+    {
+      "nome": "njcekb",
+      "sobrenome": "1biobcj",
+      "email": "1hbecno'",
+      "dataNascimento": "2023-11-16T03:00:00.000Z",
+      "sexo": "",
+      "servico": "Assistência Odontológica",
+      "profissao": "",
+      "endereco": "c kls clsem,",
+      "id": 8
     }
   ]
 }
